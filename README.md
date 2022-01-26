@@ -14,8 +14,6 @@
 
 # Useful Websites
 
-* [TKinter Documentation](https://docs.python.org/3/library/tkinter.html#the-window-manager)
-* [SQLite3 Documentation](https://sqlite.org/docs.html)
-* [Codemy Tkinter Tutorial](https://www.youtube.com/watch?v=YXPyB4XeYLA)
-* [Python Password Manager](https://www.youtube.com/watch?v=8e6HQvy7ggU)
+* [Kivy Tutorial Playlist](https://www.youtube.com/playlist?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg)
+
 
