@@ -15,6 +15,7 @@ db = firestore.client()
 
 class EntryLayout(Widget):
         date = ObjectProperty(None)
+        r0 = ObjectProperty(None)
         r1 = ObjectProperty(None)
         r2 = ObjectProperty(None)
         r3 = ObjectProperty(None)
@@ -24,10 +25,10 @@ class EntryLayout(Widget):
         r7 = ObjectProperty(None)
         r8 = ObjectProperty(None)
         r9 = ObjectProperty(None)
-        r10 = ObjectProperty(None)
         
         def submit(self):
                 date = self.date.text
+                r0 = self.r0.text
                 r1 = self.r1.text
                 r2 = self.r2.text
                 r3 = self.r3.text
@@ -37,8 +38,9 @@ class EntryLayout(Widget):
                 r7 = self.r7.text
                 r8 = self.r8.text
                 r9 = self.r9.text
-                r10 = self.r10.text
-                data = {"1" : r1,
+        
+                data = {"0" : r0,
+                        "1" : r1,
                         "2" : r2,
                         "3" : r3,
                         "4" : r4,
@@ -46,8 +48,7 @@ class EntryLayout(Widget):
                         "6" : r6,
                         "7" : r7,
                         "8" : r8,
-                        "9" : r9,
-                        "10" : r10}
+                        "9" : r9}
                 db.collection("top 10").document(date).set(data)
 
 class MainApp(App):
