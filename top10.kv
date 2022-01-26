@@ -1,0 +1,27 @@
+<EntryLayout>
+    
+    date:date
+    reason1:reason1
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "Date"
+            TextInput:
+                id:date
+                multiline: False
+            
+            Label:
+                text: "Reason 1"
+            TextInput:
+                id:reason1
+                multiline: False
+        
+        Button:
+            text: "Submit"
+        
