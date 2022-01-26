@@ -7,3 +7,10 @@ cred = credentials.Certificate("serviceAccountKey.json")
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
+
+"""
+# Test setup
+data = {"1) " : "Sam is Happy",
+        "2) " : "I have my degree"}
+db.collection("top 10").document("10-16-2022").set(data)
+"""
