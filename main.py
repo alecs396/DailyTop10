@@ -1,6 +1,9 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+import kivy
+from kivy.app import App
+from kivy.uix.label import Label
 
 # Database Setup
 cred = credentials.Certificate("serviceAccountKey.json")
