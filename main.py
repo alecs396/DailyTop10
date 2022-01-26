@@ -4,8 +4,8 @@ from firebase_admin import firestore
 import kivy
 from kivy.app import App
 from kivy.uix.widget import Widget
-from kivy.properties import ObjectProperty
 from kivy.lang import Builder
+
 
 class EntryLayout(Widget):
         pass
@@ -18,7 +18,10 @@ class MainApp(App):
                 firebase_admin.initialize_app(cred)
 
                 db = firestore.client()
-                return Builder.load_file('top10.kv')
+                
+                # Load Builder
+                Builder.load_file('top10.kv')
+                return EntryLayout()
         
         def submit(self):
                 pass
