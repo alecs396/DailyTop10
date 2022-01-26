@@ -1,10 +1,10 @@
-from dataclasses import dataclass
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 import kivy
 from kivy.app import App
 from kivy.uix.widget import Widget
+from kivy.properties import ObjectProperty
 from kivy.lang import Builder
              
 # Database Setup
@@ -14,10 +14,13 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 class EntryLayout(Widget):
+        date = ObjectProperty(None)
+        r1 = ObjectProperty(None)
         def submit(self):
-                data = {"date" : "Today",
-                        "1" : "Sam is Happy"}
-                db.collection("top 10").document("1-26-2022").set(data)
+                date = self.date.text
+                r1 = self.r1.text
+                data = {"1" : r1}
+                db.collection("top 10").document(date).set(data)
 
 class MainApp(App):
         def build(self):

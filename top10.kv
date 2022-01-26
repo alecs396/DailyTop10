@@ -1,5 +1,6 @@
 <EntryLayout>
-
+    date:date
+    r1:r1
     GridLayout:
         cols:1
         size: root.width, root.height
@@ -8,13 +9,15 @@
             cols:2
 
             Label:
-                text: "Date"
+                text: "Date (MM-DD-YYYY)"
             TextInput:
+                id:date
                 multiline: False
             
             Label:
                 text: "Reason 1"
             TextInput:
+                id:r1
                 multiline: False
         
         Button:
