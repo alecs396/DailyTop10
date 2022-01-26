@@ -15,5 +15,5 @@
 # Useful Websites
 
 * [Kivy Tutorial Playlist](https://www.youtube.com/playlist?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg)
-
+* [Kivy Documentation PDF](https://buildmedia.readthedocs.org/media/pdf/kivy/latest/kivy.pdf)
 
