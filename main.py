@@ -4,6 +4,7 @@ from firebase_admin import firestore
 import kivy
 from kivy.app import App
 from kivy.uix.widget import Widget
+from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import ObjectProperty
 from kivy.lang import Builder
     
@@ -13,7 +14,10 @@ firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
-class EntryLayout(Widget):
+
+class ViewerScreen(Screen):
+        pass
+class EntryLayout(Screen):
         date = ObjectProperty(None)
         r0 = ObjectProperty(None)
         r1 = ObjectProperty(None)
@@ -50,6 +54,9 @@ class EntryLayout(Widget):
                         "8" : r8,
                         "9" : r9}
                 db.collection("top 10").document(date).set(data)
+
+class WindowManager(ScreenManager):
+        pass
 
 class MainApp(App):
         def build(self):
