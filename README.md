@@ -11,7 +11,7 @@ I have kept this journal for about six months and it is actually pretty incredib
 ## What this program does
 This program is a Top 10 Journal that creates entries and stores them in a FireStore database. It was created in Python and I used the Kivy library and language in order to create a GUI.
 
-[Software Demo Video](https://youtu.be/08pb3RzIPEE)
+[Software Demo Video](https://youtu.be/NzizkSDBy_4)
 
 # Development Environment
 
@@ -27,7 +27,6 @@ This program is a Top 10 Journal that creates entries and stores them in a FireS
 * [Kivy Documentation PDF](https://buildmedia.readthedocs.org/media/pdf/kivy/latest/kivy.pdf)
 
 # Upcoming Changes
-* A second page for the user to select a view entries.
+* Display entries on second page and not just the terminal.
 * The ability to delete entries.
-* Entry boxes delete after submitting a new entry.
 * Change Color Scheme and Font Design
