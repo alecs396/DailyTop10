@@ -1,0 +1,44 @@
+WindowManager:
+
+    StartScreen:
+    EntryViewScreen:
+
+<StartScreen>:
+    name: "start"
+
+    BoxLayout:
+        orientation: "verticle"
+        size: root.width, root.height
+
+        Label:
+            text: "Start Screen"
+            font_size: 32
+        
+        Button:
+            text: "Create Entry"
+            font_size: 32
+            on_release:
+        
+        Button:
+            text: "View Entries"
+            font_size: 32
+            on_release:
+
+
+<EntryViewScreen>:
+    name: "viewer"
+
+    BoxLayout:
+        orientation: "verticle"
+        size: root.width, root.height
+
+        Label:
+            text: "Entry Viewer Screen"
+            font_size:32
+        
+        Button:
+            text: "Create Entry"
+            font_size: 32
+            on_release:
+
+    

@@ -18,10 +18,12 @@ WindowManager:
 
     GridLayout:
         cols:1
-        size: root.width, root.height
+        size: 100, 200
         Label:
+            id: top_label
             text: "I am happy and greatful because..."
-            font_size:32
+            font_size: 36
+            size_hint_y: 0.4
 
         GridLayout:
             cols:2
@@ -92,14 +94,48 @@ WindowManager:
                 id:r9
                 multiline: False
         
-        Button:
-            text: "Submit"
-            font_size:32
-            on_press: root.submit()
+            Button:
+                text: "View Entries"
+                font_size:16
+                on_press: 
+                    app.root.current = "viewer"
+            Button:
+                text: "Submit"
+                font_size:16
+                on_press: root.submit()
+                
+
+<ViewerScreen>:
+    name: "viewer"
+    size: root.width, root.height
+    date:date
+
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+        Label:
+            id: "record"
+            text: "Enter date you wish to view"
         
-        Button:
-            text: "View Entries"
-            font_size:32
+        GridLayout:
+            cols: 2
+            
+            Label:
+                text: "Enter Date"
+            TextInput:
+                id: date
+                multiline: False
+
+            Button:
+                text: "Create New Entry"
+                size_y: 0.1
+                font_size: 16
+                on_press: app.root.current = "entry"            
+            Button:
+                text: "Submit Date"
+                size_y: 0.1
+                font_size: 16
+                on_press: root.show_records()
 
 
 
